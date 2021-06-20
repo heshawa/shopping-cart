@@ -19,6 +19,7 @@ Shopping cart application is a simple web application where you can create onlin
 - Spring validation provides annotated request validation
 - DTO classes to control exposing data
 - ENUM to constraints declarations
+- MSA to provide loosely coupled services(Product service also should run as a seperate service)
 
 **NOTE:** Above technologies hasn't implemented in all the places. They have been implemented to demonstrate usage. However it is possible to implement above standard easily.
 
