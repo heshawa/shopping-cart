@@ -10,6 +10,24 @@ Shopping cart application is a simple web application where you can create onlin
 - DTO classes
 - Business error handling
 
+## Tehnologies used
+
+- Discovery server to route micro service invocations
+    - Can spin up multiple services in different ports. Eureka server is handling load balancing
+- Spring boot web provide simplified Rest controllers with many annotations
+- Spring JPA provide CRUD repository which reduces queries
+- Spring validation provides annotated request validation
+- DTO classes to control exposing data
+- ENUM to constraints declarations
+
+**NOTE:** Above technologies hasn't implemented in all the places. They have been implemented to demonstrate usage. However it is possible to implement above standard easily.
+
+## Patterns used
+
+- Singleton pattern - singleton beans and autowired  singletons 
+- Proxy pattern to retrive entities
+- Template method pattern - Execute queries and handle requests bodies and response bodies
+- Service discovery pattern
 ## Services
 - customer service
     - User register
