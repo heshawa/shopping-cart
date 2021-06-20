@@ -26,16 +26,24 @@ Shopping cart application is a simple web application where you can create onlin
 ### prerequisite
 - install mysql in local
 - install java 8
+- Deploy MySQL databases(Import [SQL Script](https://github.com/heshawa/shopping-cart/blob/main/SQL%20scripts/all_3_dbs.sql))
 - Postnam for invoke the apis
 ### run
 - Checkout code from git
 ```sh
 $git checkout 
 ```
-- Up mysql server and run .sql scripts in the dbmigration folder
-- navigate into Services-jar folder
-- Run jar files inside the folder
-Double click on each jar or run following command 
+#### Build and run
+- Build and run [discovery-server](https://github.com/heshawa/shopping-cart/tree/main/discovery-server)
+- Build and run 3 services ([customer](https://github.com/heshawa/shopping-cart/tree/main/customer), [shopping-cart](https://github.com/heshawa/shopping-cart/tree/main/shoppingcart), [payments](https://github.com/heshawa/shopping-cart/tree/main/payment))
+- Build and run [demo-application](https://github.com/heshawa/shopping-cart/tree/main/demo-application)
+
+#### Execute jar files
+- navigate into service folders
+- Execute build commands
+    - mvn clean install -DskipTests
+- You can find executable jar files in target folder
+- Double click on each jar or run following command 
 ```sh
 $java -jar cart.jar
 $java -jar customer.jar
