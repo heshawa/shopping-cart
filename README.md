@@ -22,6 +22,10 @@ Shopping cart application is a simple web application where you can create onlin
 - Order service
     - Checkout shopping cart
 
+## Class diagrams
+- Find class diagrams in [diagrams](https://github.com/heshawa/shopping-cart/tree/main/diagrams) folder
+
+
 ## Deployment and run
 ### prerequisite
 - install mysql in local
