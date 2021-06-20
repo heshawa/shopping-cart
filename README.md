@@ -7,6 +7,8 @@ Shopping cart application is a simple web application where you can create onlin
 - Create users
 - View order details
 - Checkout shopping cart
+- DTO classes
+- Business error handling
 
 ## Services
 - customer service
@@ -48,6 +50,24 @@ $java -jar orders.jar
 
 ### Execute APIs
 
-- navigate to api-collection folder and import the given postman collection into postman
+- navigate to api-collection folder and import the given [postman collection](https://github.com/heshawa/shopping-cart/blob/main/shopping-cart.postman_collection.json) into postman
 - execute Apis which are imported inorder to run full use case
+
+### Execute Scenario given in PDF
+- Start demo-application
+- Call http://localhost:8085/executeUserCartCreation to execute code
+- Console will display shopping cart total value and details in shopping cart after updating shopping carts
+
+## Skipped due to time restriction
+- Password encrypion
+- Authentcation and authorization
+- Unit test
+## Future enhancements
+- Implemen authentication and authorization
+- Payment options
+- Password encryption
+- Saved shopping cart to checkout later
+- Integrate API manager to wrap API
+- Event driven message sending
+
 
