@@ -35,7 +35,7 @@ Shopping cart application is a simple web application where you can create onlin
 ### run
 - Checkout code from git
 ```sh
-$git checkout 
+$git checkout https://github.com/heshawa/shopping-cart.git
 ```
 #### Build and run
 - Build and run [discovery-server](https://github.com/heshawa/shopping-cart/tree/main/discovery-server)
