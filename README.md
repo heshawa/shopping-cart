@@ -62,10 +62,12 @@ $java -jar orders.jar
 - Password encrypion
 - Authentcation and authorization
 - Unit test
+- Include product in shopping cart service
 ## Future enhancements
 - Implemen authentication and authorization
 - Payment options
 - Password encryption
+- Implement Product service
 - Saved shopping cart to checkout later
 - Integrate API manager to wrap API
 - Event driven message sending
