@@ -39,12 +39,12 @@ $java -jar cart.jar
 $java -jar customer.jar
 $java -jar orders.jar
 ```
->> Note: services will be up on given urls
->> customer service - http://localhost:8083/customers
-> Order service - http://localhost:8081/orders
-> cart service - http://localhost:8082/cart
-> Eureka server - http://localhost:8761
-> Demo Application - http://localhost:8085/executeUserCartCreation
+**Note: services will be up on given urls**
+- customer service - http://localhost:8083/customers
+- Order service - http://localhost:8081/orders
+- cart service - http://localhost:8082/cart
+- Eureka server - http://localhost:8761
+- Demo Application - http://localhost:8085/executeUserCartCreation
 
 ### Execute APIs
 
