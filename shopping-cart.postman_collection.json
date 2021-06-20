@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "02023aed-17ec-4d4d-b739-c8ae148a57bd",
+		"name": "shopping-cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/customer/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Mihiri Rupika\",\r\n  \"email\":\"mihiri@gmail.com\",\r\n  \"username\":\"mihiri\",\r\n  \"password\":\"Abc123\",\r\n  \"houseNumber\":\"15/1\",\r\n  \"addressLine1\":\"Mihindu mawatha\",\r\n  \"addressLine2\":\"Madakumbura\",\r\n  \"city\":\"Panadura\",\r\n  \"contactCountryCode\":\"+94\",\r\n  \"contactNumber\":\"0772455533\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/customer/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"customer",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/customer/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\":\"ikalani\",\r\n  \"password\":\"Abc123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/customer/username/mihiri",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/customer/username/mihiri",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"customer",
+						"username",
+						"mihiri"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/primary/{cartId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/cart/primary/35570",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cart",
+						"primary",
+						"35570"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/orderline/update/{cartId}",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"quantity\":0.7,\r\n  \"productId\":\"FISH11134\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/cart/orderline/update/35570-79680",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cart",
+						"orderline",
+						"update",
+						"35570-79680"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/{cartId}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/cart/35570-79680",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cart",
+						"35570-79680"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/create/{customerd}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/order/create/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"order",
+						"create",
+						"111"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
