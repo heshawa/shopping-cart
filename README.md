@@ -43,7 +43,7 @@ Shopping cart application is a simple web application where you can create onlin
 
 ## Design diagrams
 - Find class diagrams,ER diagrams and high level diagram in [diagrams](https://github.com/heshawa/shopping-cart/tree/main/diagrams) folder
-- [HIgh level diagram](https://github.com/heshawa/shopping-cart/blob/main/diagrams/Cart-High%20level%20diagram.png)
+- [HIgh level diagram](https://github.com/heshawa/shopping-cart/blob/main/diagrams/Cart-High%20level%20diagram.jpg)
 
 
 ## Deployment and run
