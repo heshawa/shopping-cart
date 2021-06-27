@@ -1,6 +1,6 @@
 package com.org.heshawa.customer;
 
-import com.org.heshawa.customer.controller.GetCustomer;
+import com.org.heshawa.customer.controller.CustomerController;
 import com.org.heshawa.customer.dto.request.body.LoginRequest;
 import com.org.heshawa.customer.dto.response.body.CustomerResponse;
 import com.org.heshawa.customer.dto.response.body.LoginResponse;
@@ -29,7 +29,7 @@ import java.util.Objects;
 public class CustomerApplicationTests {
 
     @Autowired
-    private GetCustomer getCustomer;
+    private CustomerController getCustomer;
 
     @MockBean
     private CustomerRepository customerRepository;

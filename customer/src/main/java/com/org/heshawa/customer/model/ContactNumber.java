@@ -1,8 +1,6 @@
 package com.org.heshawa.customer.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -11,41 +9,24 @@ import java.util.Objects;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class ContactNumber {
-    private String phoneId;
-    private Integer countryCode;
-    private Long phoneNumber;
-    private Customer customerByCustomerId;
-
     @Id
     @Column(name = "phoneId", nullable = false, length = 20)
-    public String getPhoneId() {
-        return phoneId;
-    }
-
-    public void setPhoneId(String phoneId) {
-        this.phoneId = phoneId;
-    }
+    private String phoneId;
 
     @Basic
     @Column(name = "countryCode", nullable = false)
-    public Integer getCountryCode() {
-        return countryCode;
-    }
-
-    public void setCountryCode(Integer countryCode) {
-        this.countryCode = countryCode;
-    }
+    private Integer countryCode;
 
     @Basic
     @Column(name = "phoneNumber", nullable = false)
-    public Long getPhoneNumber() {
-        return phoneNumber;
-    }
+    private Long phoneNumber;
 
-    public void setPhoneNumber(Long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    @ManyToOne
+    @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
+    private Customer customerByCustomerId;
 
     @Override
     public boolean equals(Object o) {
@@ -60,15 +41,5 @@ public class ContactNumber {
     @Override
     public int hashCode() {
         return Objects.hash(phoneId, countryCode, phoneNumber);
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "customerId", referencedColumnName = "customerId", nullable = false)
-    public Customer getCustomerByCustomerId() {
-        return customerByCustomerId;
-    }
-
-    public void setCustomerByCustomerId(Customer customerByCustomerId) {
-        this.customerByCustomerId = customerByCustomerId;
     }
 }
