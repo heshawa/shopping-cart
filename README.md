@@ -10,7 +10,7 @@ Shopping cart application is a simple web application where you can create onlin
 - DTO classes
 - Business error handling
 
-## Tehnologies used
+## Technologies used
 
 - Discovery server to route micro service invocations
     - Can spin up multiple services in different ports. Eureka server is handling load balancing
@@ -19,14 +19,14 @@ Shopping cart application is a simple web application where you can create onlin
 - Spring validation provides annotated request validation
 - DTO classes to control exposing data
 - ENUM to constraints declarations
-- MSA to provide loosely coupled services(Product service also should run as a seperate service)
+- MSA to provide loosely coupled services(Product service also should run as a separate service)
 
 **NOTE:** Above technologies hasn't implemented in all the places. They have been implemented to demonstrate usage. However it is possible to implement above standard easily.
 
 ## Patterns used
 
 - Singleton pattern - singleton beans and autowired  singletons 
-- Proxy pattern to retrive entities
+- Proxy pattern to retrieve entities
 - Template method pattern - Execute queries and handle requests bodies and response bodies
 - Service discovery pattern
 ## Services
@@ -51,7 +51,7 @@ Shopping cart application is a simple web application where you can create onlin
 - install mysql in local
 - install java 8
 - Deploy MySQL databases(Import [SQL Script](https://github.com/heshawa/shopping-cart/blob/main/SQL%20scripts/all_3_dbs.sql))
-- Postnam for invoke the apis
+- Postman for invoke the APIs
 ### run
 - Checkout code from git
 ```sh
@@ -83,7 +83,7 @@ $java -jar orders.jar
 ### Execute APIs
 
 - navigate to api-collection folder and import the given [postman collection](https://github.com/heshawa/shopping-cart/blob/main/shopping-cart.postman_collection.json) into postman
-- execute Apis which are imported inorder to run full use case
+- execute Apis which are imported in order to run full use case
 
 ### Execute Scenario given in PDF
 - Start demo-application
@@ -91,12 +91,12 @@ $java -jar orders.jar
 - Console will display shopping cart total value and details in shopping cart after updating shopping carts
 
 ## Skipped due to time restriction
-- Password encrypion
-- Authentcation and authorization
+- Password encryption
+- Authentication and authorization
 - Unit test
 - Include product in shopping cart service
 ## Future enhancements
-- Implemen authentication and authorization
+- Implement authentication and authorization
 - Payment options
 - Password encryption
 - Implement Product service
