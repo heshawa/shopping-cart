@@ -1,79 +1,45 @@
 package com.org.heshawa.payment.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Objects;
 
 @Entity
+@Getter
+@Setter
 public class Payment {
-    private String paymentId;
-    private Date paymentDate;
-    private BigDecimal paymentAmount;
-    private String details;
-    private Integer paymentType;
-    private String customerId;
-    private Order orderByOrderId;
 
     @Id
     @Column(name = "paymentId", nullable = false, length = 20)
-    public String getPaymentId() {
-        return paymentId;
-    }
-
-    public void setPaymentId(String paymentId) {
-        this.paymentId = paymentId;
-    }
+    private String paymentId;
 
     @Basic
     @Column(name = "paymentDate", nullable = false)
-    public Date getPaymentDate() {
-        return paymentDate;
-    }
-
-    public void setPaymentDate(Date paymentDate) {
-        this.paymentDate = paymentDate;
-    }
+    private Date paymentDate;
 
     @Basic
     @Column(name = "paymentAmount", nullable = false, precision = 2)
-    public BigDecimal getPaymentAmount() {
-        return paymentAmount;
-    }
-
-    public void setPaymentAmount(BigDecimal paymentAmount) {
-        this.paymentAmount = paymentAmount;
-    }
+    private BigDecimal paymentAmount;
 
     @Basic
-    @Column(name = "details", nullable = true, length = 255)
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
+    @Column(name = "details")
+    private String details;
 
     @Basic
     @Column(name = "paymentType", nullable = false)
-    public Integer getPaymentType() {
-        return paymentType;
-    }
-
-    public void setPaymentType(Integer paymentType) {
-        this.paymentType = paymentType;
-    }
+    private Integer paymentType;
 
     @Basic
     @Column(name = "customerId", nullable = false, length = 20)
-    public String getCustomerId() {
-        return customerId;
-    }
+    private String customerId;
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
+    @ManyToOne
+    @JoinColumn(name = "orderId", referencedColumnName = "orderId", nullable = false)
+    private Order orderByOrderId;
 
     @Override
     public boolean equals(Object o) {
@@ -93,13 +59,4 @@ public class Payment {
         return Objects.hash(paymentId, paymentDate, paymentAmount, details, paymentType, customerId);
     }
 
-    @ManyToOne
-    @JoinColumn(name = "orderId", referencedColumnName = "orderId", nullable = false)
-    public Order getOrderByOrderId() {
-        return orderByOrderId;
-    }
-
-    public void setOrderByOrderId(Order orderByOrderId) {
-        this.orderByOrderId = orderByOrderId;
-    }
 }
