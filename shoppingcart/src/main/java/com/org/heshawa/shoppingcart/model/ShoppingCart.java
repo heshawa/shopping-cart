@@ -1,8 +1,6 @@
 package com.org.heshawa.shoppingcart.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -14,62 +12,28 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 public class ShoppingCart {
-    private String shoppingCartId;
-    private String customerId;
-    private Boolean isPrimary;
-    private Integer numberOfItems;
-    private BigDecimal cartValue;
-
     @Id
     @Column(name = "shoppingCartId", nullable = false, length = 20)
-    public String getShoppingCartId() {
-        return shoppingCartId;
-    }
-
-    public void setShoppingCartId(String shoppingCartId) {
-        this.shoppingCartId = shoppingCartId;
-    }
+    private String shoppingCartId;
 
     @Basic
     @Column(name = "customerId", nullable = false, length = 20)
-    public String getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
-    }
+    private String customerId;
 
     @Basic
     @Column(name = "isPrimary", nullable = false)
-    public Boolean getIsPrimary() {
-        return isPrimary;
-    }
-
-    public void setIsPrimary(Boolean isPrimary) {
-        this.isPrimary = isPrimary;
-    }
+    private Boolean isPrimary;
 
     @Basic
     @Column(name = "numberOfItems", nullable = false)
-    public Integer getNumberOfItems() {
-        return numberOfItems;
-    }
-
-    public void setNumberOfItems(Integer numberOfItems) {
-        this.numberOfItems = numberOfItems;
-    }
+    private Integer numberOfItems;
 
     @Basic
     @Column(name = "cartValue", nullable = false, precision = 2)
-    public BigDecimal getCartValue() {
-        return cartValue;
-    }
-
-    public void setCartValue(BigDecimal cartValue) {
-        this.cartValue = cartValue;
-    }
+    private BigDecimal cartValue;
 
     /**
      * Update cart attributes with changing order lines
