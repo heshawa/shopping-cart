@@ -93,14 +93,7 @@ $java -jar orders.jar
 ## Skipped due to time restriction
 - Password encryption
 - Authentication and authorization
-- Unit test
-- Include product in shopping cart service
-## Future enhancements
-- Implement authentication and authorization
-- Payment options
-- Password encryption
-- Implement Product service
-- Saved shopping cart to checkout later
+- Unit test - 'Authenticate customer' method has fully covered by unit tests in customer service
 - Integrate API manager to wrap API
 - Event driven message sending
 
